@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for camera control system
+				camera: {
+					active: '#FF4D4F', // Red indicator for active camera
+					inactive: '#1F1F1F', // Dark background for inactive cameras
+					hover: '#333333', // Hover state for camera buttons
+				},
+				control: {
+					primary: '#2C2C2C', // Dark button background
+					secondary: '#3A3A3A', // Slightly lighter button background
+					accent: '#0084FF', // Blue accent color
+					success: '#52C41A', // Green for success indicators
+					warning: '#FAAD14', // Yellow for warnings
+					error: '#FF4D4F', // Red for errors
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +99,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-recording': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.5'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-recording': 'pulse-recording 2s ease-in-out infinite'
 			}
 		}
 	},
